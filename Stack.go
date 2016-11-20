@@ -7,9 +7,9 @@ func main() {
 
 	var ref = *s
 	ref.push("a")
-	ref.push("b")
-	ref.push("c")
-	ref.push("d")
+	//ref.push("b")
+	//ref.push("c")
+	//ref.push("d")
 	fmt.Println(ref.size())
 	fmt.Println(ref.pop())
 	fmt.Println(ref.pop())
@@ -29,11 +29,7 @@ func (s *Stack) pop() interface{} {
 		return nil
 	}
 	item := s.stack[len(s.stack) - 1]
-	if (len(s.stack) == 1) {
-		s.stack = make([]interface{}, 0)
-	} else {
-		s.stack = s.stack[0:len(s.stack) - 1]
-	}
+	s.stack = s.stack[0:len(s.stack) - 1]
 	return item
 }
 
