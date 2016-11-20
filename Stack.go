@@ -7,9 +7,9 @@ func main() {
 
 	var ref = *s
 	ref.push("a")
-	//ref.push("b")
-	//ref.push("c")
-	//ref.push("d")
+	ref.push("b")
+	ref.push("c")
+	ref.push("d")
 	fmt.Println(ref.size())
 	fmt.Println(ref.pop())
 	fmt.Println(ref.pop())
